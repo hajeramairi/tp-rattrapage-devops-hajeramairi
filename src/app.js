@@ -7,8 +7,9 @@ app.get('/health', (req, res) => {
 });
 
 app.get('/add/:a/:b', (req, res) => {
-  const sum = Number(req.params.a) + Number(req.params.b);
-  res.json({ result: sum });
+
+    const sum = Number(req.params.a) - Number(req.params.b);
+    res.json({ result: sum });
 });
 
 module.exports = app;
